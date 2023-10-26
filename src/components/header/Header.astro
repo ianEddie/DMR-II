@@ -1,0 +1,81 @@
+---
+import Logo from "./Logo.astro";
+import data from "../../data/menuData.json";
+import Contact from "./Contact.astro";
+---
+
+<header transition:animate='none'>
+  <!-- Logo -->
+  <Logo />
+  <!-- Contact items -->
+  <Contact />
+  <!-- Toggle Action -->
+  <label for='menu'></label>
+  <input type='checkbox' id='menu' />
+  <!-- nav -->
+  <nav>
+    {data.map((item) => <a href={item.href}>{item.name}</a>)}
+  </nav>
+  <!-- Toggle Button  -->
+  <div>
+    <button>.</button>
+  </div>
+</header>
+<style>
+  /* Desktop */
+  header {
+    @apply bg-red-800 grid grid-cols-3 fixed z-40 w-full py-2;
+  }
+  nav {
+    @apply bg-red-800 flex justify-center gap-x-2 items-center font-primary font-semibold text-neutral-100 tracking-wider;
+  }
+  a {
+    @apply px-2 py-1 rounded-2xl transition-all duration-300;
+  }
+  a:hover {
+    @apply bg-neutral-400 text-white shadow-lg shadow-black/30 translate-y-[2px];
+  }
+  label,
+  input,
+  div {
+    @apply hidden;
+  }
+  /* Phone */
+  @media screen and (max-width: 600px) {
+    header {
+      @apply flex justify-between;
+    }
+    div {
+      @apply flex justify-center items-center pr-2;
+    }
+    button {
+      @apply w-10 z-30 transition-all duration-300 text-transparent h-full;
+    }
+    #menu:not(:checked) ~ div > button {
+      background-image: url("../../assets/menu-icon.png");
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    #menu:checked ~ div > button {
+      background-image: url("../../assets/close-icon.png");
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    label {
+      @apply flex w-10 h-full absolute z-40 top-0 right-2 cursor-pointer;
+    }
+    nav {
+      clip-path: circle(0 at center);
+      transition: clip-path 0.7s ease-in-out;
+      @apply absolute top-0 right-0 w-full h-screen flex flex-col items-center justify-center gap-y-20 z-30;
+    }
+    button {
+      @apply flex;
+    }
+    input:checked + nav {
+      clip-path: circle(100% at center);
+    }
+  }
+</style>

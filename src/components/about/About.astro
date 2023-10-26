@@ -1,0 +1,29 @@
+---
+import Questions from "./Questions.astro";
+---
+
+<section>
+  <article class='flex flex-col items-center gap-y-7 sm:w-2/3 sm:px-0 px-5'>
+    <h1
+      class='text-3xl font-semibold tracking-wide text-neutral-900 underline underline-offset-8 decoration-red-500 decoration-1'
+    >
+      Nosotros
+    </h1>
+    <p class='text-lg text-justify font-semibold text-neutral-700'>
+      Somos una empresa familiar con mas de 20 años de experiencia, brindamos
+      atencion de forma particular a domicilio, asi como tambien servicios para
+      empresas, fabricas, edificios, consorcios, barrios privados y mas.
+      trabajamos con elementos de seguridad e higiene. Servicios de urgencias a
+      domicilio en todo el AMBA 24x7. Tenemos una importante experiencia, pero
+      lo más relevante es el factor humano del que disponemos y la capacitación
+      de nuestros técnicos. Por esto sabemos que estamos preparados para darle a
+      usted la tranquilidad de un buen servicio.
+    </p>
+  </article>
+  <Questions />
+</section>
+<style>
+  section {
+    @apply min-h-screen flex flex-col items-center justify-around pt-14 font-primary gap-y-10;
+  }
+</style>

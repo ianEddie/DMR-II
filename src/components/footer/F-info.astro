@@ -1,0 +1,25 @@
+---
+import data from "../../data/footerInfo.json";
+---
+
+  <article class='flex flex-col'>
+  <h2
+    class='text-xl text-neutral-200 font-semibold h-20 flex items-end justify-center'
+  >
+    Servicios
+  </h2>
+  <div
+    class='flex flex-col items-center py-10 gap-y-5 sm:px-0 px-3 flex-grow sm:text-base text-sm'
+  >
+    {
+      data.map(({ text, icon }) => (
+        <div class='flex gap-x-3 items-center text-white rounded-full text-center sm:w-2/3 w-full'>
+          <div class='rounded-full flex justify-center items-center bg-slate-100 p-1'>
+            <img src={icon} alt='icon' class='h-6' />
+          </div>
+          <h2>{text}</h2>
+        </div>
+      ))
+    }
+  </div>
+</article>

@@ -1,0 +1,25 @@
+---
+import data from "../../data/contactData.json";
+---
+
+<article class='flex flex-col'>
+  <h2
+    class='text-xl text-neutral-200 font-semibold h-20 flex items-end justify-center'
+  >
+    Contacto
+  </h2>
+  <div
+    class='flex flex-col justify-start py-10 sm:px-0 px-2 sm:text-base text-sm items-center gap-y-5 h-2/3 flex-grow'
+  >
+    {
+      data.map(({ icon, label }) => (
+        <div class='flex gap-x-5 items-center text-neutral-100 sm:w-[60%] w-full'>
+          <div class='bg-slate-100 rounded-full p-1'>
+            <img src={icon} alt={label} class='h-6' />
+          </div>
+          <h2>{label}</h2>
+        </div>
+      ))
+    }
+  </div>
+</article>

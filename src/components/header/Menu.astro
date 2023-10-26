@@ -1,0 +1,12 @@
+---
+import data from "../../data/menuData.json";
+---
+
+<nav>
+  {data.map((item) => <a href={item.href}>{item.name}</a>)}
+</nav>
+<style>
+  nav {
+    @apply flex justify-end items-center gap-x-5 pr-10 font-primary text-white  ;
+  }
+</style>

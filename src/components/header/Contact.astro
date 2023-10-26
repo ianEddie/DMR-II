@@ -1,0 +1,24 @@
+---
+import data from "../../data/contactData.json";
+---
+
+<ul>
+  {
+    data.map((item) => (
+      <a
+        href={item.href}
+        class='flex gap-x-2 items-center bg-red-600 text-white pl-1 pr-3 py-1 rounded-3xl font-semibold'
+      >
+        <div class='bg-black p-1 rounded-full'>
+          <img src={item.icon} alt='icon' class='h-5' />
+        </div>
+        <span class='flex-grow'>{item.label}</span>
+      </a>
+    ))
+  }
+</ul>
+<style>
+  ul {
+    @apply flex justify-center sm:gap-x-5 gap-x-1 text-neutral-900 sm:text-base text-sm;
+  }
+</style>
