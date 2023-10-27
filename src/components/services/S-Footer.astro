@@ -2,10 +2,10 @@
 import data from "../../data/infoData.json";
 ---
 
-<article class='sm:w-2/3 flex justify-around items-center sm:py-5 py-2'>
+<article class='sm:w-2/3 flex sm:justify-between justify-around'>
   {
     data.map(({ text, img }) => (
-      <article class='bg-red-600 text-neutral-900  sm:w-[20%] w-[30%] rounded-xl grid grid-rows-2 sm:p-2 p-4 shadow-xl shadow-black/40 '>
+      <article class='bg-red-600 text-neutral-900 w-1/4 rounded-xl grid grid-rows-2 sm:p-2 p-4 shadow-xl shadow-black/40 '>
         <div class='flex justify-center items-center '>
           <img src={img} alt={text} />
         </div>

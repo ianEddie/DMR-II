@@ -2,8 +2,10 @@
 import Questions from "./Questions.astro";
 ---
 
-<section>
-  <article class='flex flex-col items-center gap-y-7 sm:w-2/3 sm:px-0 px-5'>
+<section
+  class='flex flex-col items-center justify-around pt-24 font-primary gap-y-10'
+>
+  <article class='flex flex-col items-center gap-y-10 sm:w-2/3 sm:px-0 px-7'>
     <h1
       class='text-3xl font-semibold tracking-wide text-neutral-900 underline underline-offset-8 decoration-red-500 decoration-1'
     >
@@ -22,8 +24,3 @@ import Questions from "./Questions.astro";
   </article>
   <Questions />
 </section>
-<style>
-  section {
-    @apply min-h-screen flex flex-col items-center justify-around pt-14 font-primary gap-y-10;
-  }
-</style>
