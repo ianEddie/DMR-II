@@ -1,5 +1,5 @@
 ---
-import Phone from "../icons/Phone.astro";
+import CallButton from '../buttons/CallButton.astro';
 ---
 
 <section>
@@ -8,7 +8,9 @@ import Phone from "../icons/Phone.astro";
       class='h-[60%] flex flex-col items-center justify-end text-center gap-y-4 px-5'
     >
       <!-- Main title -->
-      <h1 class='flex flex-col sm:text-[3.5em] text-[3.2em] font-primary font-black'>
+      <h1
+        class='flex flex-col sm:text-[3.5em] text-[3.2em] font-primary font-black'
+      >
         <span class='text-white'>Destapaciones Mecanicas</span>
         <span class='text-amber-500'>Romero</span>
       </h1>
@@ -19,24 +21,21 @@ import Phone from "../icons/Phone.astro";
     </article>
     <!-- Button -->
     <article class='flex-grow flex justify-center items-center'>
-      <button
-        class='bg-red-600 text-white p-1 sm:w-[13%] w-[40%] rounded-3xl font-semibold tracking-widest uppercase flex items-center'
-      >
-        <span class='flex-grow'>llamar</span>
-        <Phone />
-      </button>
+      <CallButton>
+        <span class='uppercase text-white font-semibold'>llamar</span>
+      </CallButton>
     </article>
   </div>
+  <style>
+    section {
+      background-image: url('../../assets/hero.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @apply h-screen font-primary;
+    }
+    div {
+      @apply w-full h-full flex flex-col  backdrop-grayscale-[70%] backdrop-blur-[2px] backdrop-brightness-[.4];
+    }
+  </style>
 </section>
-<style>
-  section {
-    background-image: url("../../assets/hero.jpg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    @apply h-screen font-primary;
-  }
-  div {
-    @apply w-full h-full flex flex-col  backdrop-grayscale-[70%] backdrop-blur-[2px] backdrop-brightness-[.4];
-  }
-</style>

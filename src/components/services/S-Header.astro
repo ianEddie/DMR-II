@@ -1,20 +1,20 @@
 ---
-import Phone from "../icons/Phone.astro";
+import CallButton from '../buttons/CallButton.astro';
+import Phone from '../icons/Phone.astro';
 ---
 
 <article
   class='flex flex-col justify-center items-center text-center gap-y-10 sm:w-2/3 sm:px-0 px-7'
 >
-  <h1 class='text-3xl text-red-700 font-primary '>
+  <h1 class='text-3xl text-red-800 font-primary'>
     No dejes que un problema de cañerías te cause estrés
   </h1>
-  <h2 class='text-lg font-primary font-semibold tracking-wide'>¡Llámanos ahora para solicitar una consulta gratuita!</h2>
-  <button class='bg-red-600  flex w-48 py-1 pr-1 items-center rounded-3xl shadow-lg shadow-black/30'>
-    <span
-      class='text-lg text-white font-semibold tracking-wider flex-grow flex justify-center pl-6'
+  <h2 class='text-lg font-primary font-semibold tracking-wide'>
+    ¡Llámanos ahora para solicitar una consulta gratuita!
+  </h2>
+  <CallButton>
+    <span class='text-white font-semibold tracking-wide'
+      >1138422513</span
     >
-      1138422513</span
-    >
-    <Phone />
-  </button>
+  </CallButton>
 </article>

@@ -1,22 +1,20 @@
 ---
-import data from "../../data/contactData.json";
+import CallButton from '../buttons/CallButton.astro';
+import MailButton from '../buttons/MailButton.astro';
 ---
 
-<ul>
-  {
-    data.map((item) => (
-      <a
-        href={item.href}
-        class='flex gap-x-2 items-center bg-red-600 text-white pl-1 pr-3 py-1 rounded-3xl font-semibold'
-      >
-        <div class='bg-black p-1 rounded-full'>
-          <img src={item.icon} alt='icon' class='h-5' />
-        </div>
-        <span class='flex-grow'>{item.label}</span>
-      </a>
-    ))
-  }
-</ul>
+<div class='flex gap-x-4 bg-blue-400'>
+  <a href=''>
+    <CallButton>
+      <span class='text-white font-semibold'>1138422513</span>
+    </CallButton>
+  </a>
+  <a href=''>
+    <MailButton>
+      <span class='text-white font-semibold'>info@dmr.com.ar</span>
+    </MailButton>
+  </a>
+</div>
 <style>
   ul {
     @apply flex justify-center sm:gap-x-5 gap-x-1  sm:text-base text-xs;

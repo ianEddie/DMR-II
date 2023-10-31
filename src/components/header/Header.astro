@@ -1,14 +1,12 @@
 ---
-import Logo from "./Logo.astro";
-import data from "../../data/menuData.json";
-import Contact from "./Contact.astro";
+import Logo from './Logo.astro';
+import data from '../../data/menuData.json';
+import Contact from './Contact.astro';
 ---
 
 <header transition:animate='none'>
   <!-- Logo -->
   <Logo />
-  <!-- Contact items -->
-  <Contact />
   <!-- Toggle Action -->
   <label for='menu'></label>
   <input type='checkbox' id='menu' />
@@ -24,7 +22,7 @@ import Contact from "./Contact.astro";
 <style>
   /* Desktop */
   header {
-    @apply bg-red-800 grid grid-cols-3 fixed z-40 w-full py-2;
+    @apply bg-red-900 flex fixed z-40 w-full py-2 px-3 rounded-b-3xl;
   }
   nav {
     @apply bg-red-800 flex justify-center gap-x-2 items-center font-primary font-semibold text-neutral-100 tracking-wider;
@@ -52,17 +50,17 @@ import Contact from "./Contact.astro";
       @apply w-10 z-30 transition-all duration-300 text-transparent h-full;
     }
     #menu:not(:checked) ~ div > button {
-      background-image: url("https://i.postimg.cc/g04KSJX2/menu.png");
+      background-image: url('https://i.postimg.cc/g04KSJX2/menu.png');
       background-position: center center;
       background-repeat: no-repeat;
     }
     #menu:checked ~ div > button {
-      background-image: url("https://i.postimg.cc/Wb21j1hv/close.png");
+      background-image: url('https://i.postimg.cc/Wb21j1hv/close.png');
       background-position: center center;
       background-repeat: no-repeat;
     }
     label {
-      @apply flex w-10 h-full absolute z-40 top-0 right-2 cursor-pointer;
+      @apply flex w-10 h-full absolute z-40 top-0 right-4 cursor-pointer;
     }
     nav {
       clip-path: circle(0 at center);

@@ -5,13 +5,9 @@ import data from "../../data/infoData.json";
 <article class='sm:w-2/3 flex sm:justify-between justify-around'>
   {
     data.map(({ text, img }) => (
-      <article class='bg-red-600 text-neutral-900 w-1/4 rounded-xl grid grid-rows-2 sm:p-2 p-4 shadow-xl shadow-black/40 '>
-        <div class='flex justify-center items-center '>
-          <img src={img} alt={text} />
-        </div>
-        <div class='flex justify-center items-center text-center'>
-          <h2 class='sm:text-xl text-neutral-100'>{text}</h2>
-        </div>
+      <article class='bg-red-800 text-neutral-900 sm:w-1/4 w-[28%] rounded-xl flex flex-col justify-between items-center text-center sm:p-2 px-1 py-4 gap-y-3 shadow-xl shadow-black/40 '>
+        <img src={img} alt={text} class="h-10 w-10" />
+        <h2 class='sm:text-xl text-neutral-100'>{text}</h2>
       </article>
     ))
   }
