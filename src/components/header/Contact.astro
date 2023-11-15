@@ -1,19 +1,15 @@
 ---
-import CallButton from '../buttons/CallButton.astro';
-import MailButton from '../buttons/MailButton.astro';
+import data from '../../data/contactData.json';
 ---
 
-<div class='flex gap-x-4 bg-blue-400'>
-  <a href=''>
-    <CallButton>
-      <span class='text-white font-semibold'>1138422513</span>
-    </CallButton>
-  </a>
-  <a href=''>
-    <MailButton>
-      <span class='text-white font-semibold'>info@dmr.com.ar</span>
-    </MailButton>
-  </a>
+<div class='sm:flex hidden justify-end items-center gap-x-16'>
+  {
+    data.map(({ name, icon, href }) => (
+      <a href={href}>
+        <img src={icon} alt={name} class='h-[25px] w-[25px]' />
+      </a>
+    ))
+  }
 </div>
 <style>
   ul {

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Reparación de fugas de agua",
+    "icon": "https://i.postimg.cc/8CH9fLp7/icons8-pipeline-48.webp"
+  },
+  {
+    "id": 2,
+    "title": "Destapación de tuberías y desagües",
+    "icon": "https://i.postimg.cc/0jLB1ffB/icons8-support-48.webp"
+  },
+  {
+    "id": 3,
+    "title": "Instalación de calentadores de agua",
+    "icon": "https://i.postimg.cc/Zn9MQgrN/icons8-water-48.webp"
+  },
+  {
+    "id": 4,
+    "title": "Instalación y revisión de sistemas de gas",
+    "icon": "https://i.postimg.cc/qRvYsgqj/icons8-gas-48.webp"
+  },
+  {
+    "id": 5,
+    "title": "Reparación y sustitución de grifos y sanitarios",
+    "icon": "https://i.postimg.cc/xdYBd62r/icons8-bathroom-48.webp"
+  },
+  {
+    "id": 6,
+    "title": "Trabajos de plomeria y gas en general",
+    "icon": "https://i.postimg.cc/50Krn1F1/icons8-plumbing-48.webp"
+  }
+]

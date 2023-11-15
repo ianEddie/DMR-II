@@ -1,14 +1,18 @@
 [
     {
         "name": "Destapaciones",
-        "href": ""
+        "href": "/destapaciones"
     },
     {
-        "name": "Plomeria",
-        "href": ""
+        "name": "Plomeria/Gas",
+        "href": "/plomeria"
     },
     {
         "name": "Contacto",
-        "href": ""
+        "href": "/contacto"
+    },
+    {
+        "name": "Electricidad",
+        "href": "/electricidad"
     }
 ]

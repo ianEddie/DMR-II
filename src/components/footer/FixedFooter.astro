@@ -1,9 +1,13 @@
 ---
-import data from '../../data/fixedFooter.json';
+import data from '../../data/contactData.json';
 ---
 
 <div
-  class='flex justify-around items-center gap-x-10 fixed bottom-0 w-full z-20 bg-red-900 p-[5px] rounded-t-3xl'
+  class='sm:hidden flex justify-around items-center gap-x-10 fixed bottom-0 w-full z-40 bg-red-900 p-[5px] rounded-t-3xl'
 >
-  {data.map(({ icon, name }) => <img src={icon} alt={name} class='w-[30px]' />)}
+  {
+    data.map(({ icon, name }) => (
+      <img src={icon} alt={name} class='w-[30px] h-[30px]' />
+    ))
+  }
 </div>

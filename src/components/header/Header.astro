@@ -4,34 +4,37 @@ import data from '../../data/menuData.json';
 import Contact from './Contact.astro';
 ---
 
-<header transition:animate='none'>
+<header
+  transition:animate='none'
+  class='bg-red-900 sm:grid sm:grid-cols-3 flex justify-between fixed z-40 w-full py-3 sm:px-10 px-6 rounded-b-3xl'
+>
   <!-- Logo -->
   <Logo />
+
   <!-- Toggle Action -->
   <label for='menu'></label>
   <input type='checkbox' id='menu' />
   <!-- nav -->
-  <nav>
+  <nav
+    class='bg-red-900 flex justify-end gap-x-2 items-center font-primary font-semibold text-neutral-100 text-sm tracking-wider'
+  >
+    <a href='/' class='sm:hidden visible'>Home</a>
     {data.map((item) => <a href={item.href}>{item.name}</a>)}
   </nav>
   <!-- Toggle Button  -->
   <div>
     <button>.</button>
   </div>
+  <!-- Contact -->
+  <Contact />
 </header>
 <style>
   /* Desktop */
-  header {
-    @apply bg-red-900 flex fixed z-40 w-full py-2 px-3 rounded-b-3xl;
-  }
-  nav {
-    @apply bg-red-800 flex justify-center gap-x-2 items-center font-primary font-semibold text-neutral-100 tracking-wider;
-  }
   a {
-    @apply px-2 py-1 rounded-2xl transition-all duration-300;
+    @apply px-2 py-1 rounded-2xl transition-all duration-500;
   }
   a:hover {
-    @apply bg-neutral-400 text-white shadow-lg shadow-black/30 translate-y-[2px];
+    @apply bg-neutral-100 text-red-900;
   }
   label,
   input,
@@ -60,12 +63,12 @@ import Contact from './Contact.astro';
       background-repeat: no-repeat;
     }
     label {
-      @apply flex w-10 h-full absolute z-40 top-0 right-4 cursor-pointer;
+      @apply flex w-10 h-full absolute z-40 top-0 right-8 cursor-pointer;
     }
     nav {
       clip-path: circle(0 at center);
       transition: clip-path 0.7s ease-in-out;
-      @apply absolute top-0 right-0 w-full h-screen flex flex-col items-center justify-center gap-y-20 z-30;
+      @apply absolute top-0 right-0 w-full h-screen flex flex-col items-center justify-center gap-y-14 z-30;
     }
     button {
       @apply flex;

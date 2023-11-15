@@ -1,0 +1,31 @@
+---
+import CallButton from '../buttons/CallButton.astro';
+import Matricula from './Matricula.astro';
+---
+
+<article
+  class='sm:pt-14 sm:h-auto h-screen px-7 sm:gap-y-5 gap-y-3 flex flex-col justify-center items-center text-center'
+>
+  <h1 class='text-3xl font-semibold text-neutral-800'>Plomeria y Gas</h1>
+  <h2 class='font font-semibold text-neutral-700'>
+    Estamos comprometidos con brindarte un servicio de calidad que resuelva tus
+    problemas de manera segura y eficiente. No dudes en contactarnos para
+    obtener más información o programar una visita.
+  </h2>
+  <div class='grid grid-rows-2 gap-3'>
+    <Matricula>
+      <h4 class='text-red-950 font-semibold text-lg tracking-wider'>
+        Servicio de Gasista Matriculado
+      </h4>
+    </Matricula>
+    <Matricula>
+      <h4 class='text-red-950 font-semibold text-lg tracking-wider'>
+        Servicio de Plomero certificado
+      </h4>
+      <h5 class='font-semibold'></h5>
+    </Matricula>
+  </div>
+  <CallButton>
+    <span class='uppercase font-semibold text-sm'>Consultar</span>
+  </CallButton>
+</article>

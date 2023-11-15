@@ -1,6 +1,7 @@
 ---
 import FixedFooter from '../components/footer/FixedFooter.astro';
 import Header from '../components/header/Header.astro';
+import { ViewTransitions, fade } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -18,15 +19,26 @@ const { title } = Astro.props;
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body>
+  <body transition:animate={fade({ duration: '0.7s' })}>
     <Header />
-    <main class='w-full flex flex-col z-20'>
+    <main>
       <slot />
     </main>
     <FixedFooter />
+    <style is:global>
+      @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@100;200;300;400&display=swap');
+      @layer {
+        body {
+          @apply scrollbar scrollbar-w-[5px]  scrollbar-track-neutral-900 scrollbar-thumb-neutral-100;
+        }
+      }
+      main {
+        background: #ffefba;
+        background: -webkit-linear-gradient(to top, #ffffff, #ffefba);
+        background: linear-gradient(to top, #ffffff, #ffefba);
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@100;200;300;400&display=swap');
-</style>

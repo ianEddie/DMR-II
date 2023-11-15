@@ -1,0 +1,17 @@
+---
+import data from '../../data/plomeriaData.json';
+import ServicesItem from './ServicesItem.astro';
+---
+
+<article
+  class='flex flex-col justify-center items-center sm:pt-14 sm:pb-0 pt-10 pb-10'
+>
+  <h3
+    class='text-3xl text-neutral-800 font-semibold font-primary underline underline-offset-8 decoration-1 decoration-red-600'
+  >
+    Servicios
+  </h3>
+  <div class='grid sm:grid-cols-3 sm:grid-rows-2 p-8 gap-5'>
+    {data.map((item) => <ServicesItem data={item} />)}
+  </div>
+</article>

@@ -1,0 +1,26 @@
+---
+import CallButton from '../../components/buttons/CallButton.astro';
+import ServicesCard from './ServicesCard.astro';
+import data from './data.json';
+---
+
+<article
+  class='flex flex-col items-center justify-around sm:pt-14 sm:pb-10 sm:py-o py-12 sm:h-auto h-screen'
+>
+  <div class='flex flex-col items-center gap-y-2'>
+    <h3
+      class='text-3xl text-neutral-800 font-semibold font-primary underline underline-offset-8 decoration-1 decoration-red-600'
+    >
+      Servicios
+    </h3>
+    <h4 class='text-lg text-red-500 font-semibold tracking-wide'>
+      Atencion a domicilio 24hs
+    </h4>
+  </div>
+  <div class='w-full flex flex-col items-center gap-y-5'>
+    {data.map(({ servicio }) => <ServicesCard servicio={servicio} />)}
+  </div>
+  <CallButton>
+    <span class='uppercase font-semibold'>Consultar</span>
+  </CallButton>
+</article>
