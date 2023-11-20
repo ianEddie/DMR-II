@@ -4,13 +4,13 @@ const { title, description, img } = Astro.props;
 ---
 
 <article
-  class='grid grid-cols-2 w-full rounded-2xl bg-neutral-100 shadow-lg shadow-black/10 font-primary'
+  class='grid grid-cols-2 w-full rounded-2xl bg-white shadow-xl shadow-black/10 font-primary'
 >
   <div
-    class='flex flex-col justify-around items-center text-center gap-y-4 py-4 px-2 text-stone-900'
+    class='flex flex-col justify-around items-center text-center gap-y-4 py-4 px-5 text-stone-900'
   >
-    <h2 class='font-semibold text-lg'>{title}</h2>
-    <p class='tracking-wide text-[12px]'>{description}</p>
+    <h2 class='font-semibold sm:text-2xl text-lg'>{title}</h2>
+    <p class='tracking-wide sm:text-base text-[12px]'>{description}</p>
     <CardButton />
   </div>
   <div>

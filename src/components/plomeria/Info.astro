@@ -3,16 +3,16 @@ import CallButton from '../buttons/CallButton.astro';
 import Matricula from './Matricula.astro';
 ---
 
-<article
-  class='sm:pt-14 sm:py-0 py-16 sm:h-auto h-screen px-7 sm:gap-y-5 gap-y-3 flex flex-col sm:justify-center justify-around items-center text-center'
->
-  <h1 class='text-3xl font-semibold text-neutral-800'>Plomeria y Gas</h1>
-  <h2 class='font font-semibold text-neutral-700'>
-    Estamos comprometidos con brindarte un servicio de calidad que resuelva tus
-    problemas de manera segura y eficiente. No dudes en contactarnos para
-    obtener más información o programar una visita.
-  </h2>
-  <div class='grid grid-rows-2 gap-3'>
+<article>
+  <div class='flex flex-col items-center gap-y-5'>
+    <h1 class='text-3xl font-semibold text-neutral-800'>Plomeria y Gas</h1>
+    <h2 class='font font-semibold text-neutral-700 text-center px-5'>
+      Estamos comprometidos con brindarte un servicio de calidad que resuelva
+      tus problemas de manera segura y eficiente. No dudes en contactarnos para
+      obtener más información o programar una visita.
+    </h2>
+  </div>
+  <div class='flex flex-col gap-7 w-full items-center'>
     <Matricula>
       <h4 class='text-red-950 font-semibold text-lg tracking-wider'>
         Servicio de Gasista Matriculado
@@ -29,3 +29,13 @@ import Matricula from './Matricula.astro';
     <span class='uppercase font-semibold text-sm'>Consultar</span>
   </CallButton>
 </article>
+<style>
+  article {
+    @apply flex flex-col items-center justify-around pt-14;
+  }
+  @media screen and (max-width: 450px) {
+    article {
+      @apply flex flex-col items-center justify-around pt-16 px-5 gap-y-10;
+    }
+  }
+</style>
